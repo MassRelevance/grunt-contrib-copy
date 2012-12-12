@@ -54,10 +54,6 @@ module.exports = function(grunt) {
       file.dest = path.normalize(file.dest);
       srcFiles = grunt.file.expandFiles(options.minimatch, file.src);
 
-      if (srcFiles.length === 0) {
-        grunt.fail.warn('Unable to copy; no valid source files were found.');
-      }
-
       destType = detectDestType(file.dest);
 
       if (destType === 'file') {
